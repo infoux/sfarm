@@ -1,4 +1,4 @@
-// out: ./style.css, compress: true, sourceMap: false
+// out: ./style.css, compress: false, sourceMap: false 
 
 @import "normalize.css";
 @import "rem.less";
@@ -446,13 +446,37 @@ body {
         .container {
             .rem(line-height, 50);
             .relative;
+            .center;
 
             h1 {
                 .center;
                 .mapazero;
-                color:#fff;
                 .rem(font-size, 18);
                 .normal;
+                color:#fff;
+
+                a {
+                    color:#fff;
+                }
+            }
+
+            select {
+                
+                appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                -webkit-appearance: none;
+                &::-ms-expand {
+                    display: none;
+                }
+
+                background:none;
+                .rem(padding, 6 40 6 20);
+                .rem(font-size, 18);
+                color:#fff;
+                border:none;
+
+                background:url("../images/bx-chevron-down.svg") no-repeat right center / auto 100%;
             }
 
             button {
@@ -828,7 +852,6 @@ body {
                                 td {
                                     .rem(font-size, 12);
                                     .rem(height, 44);
-                                    .center;
                                     border-bottom:1px solid #eee;
 
                                     u {
